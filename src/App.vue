@@ -1,28 +1,26 @@
-<!--
- * @Description: 
- * @StartVersion: 2.0
- * @LastVersion: 2.0
- * @Autor: gaoyue
- * @Date: 2023-06-30 14:40:10
- * @LastEditTime: 2023-07-11 14:37:05
--->
 <template>
-  <div id="qkApp2" class="vue2-css">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="vue2-css">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+      <keep-alive v-if="isMicroApp">
+        <router-view />
+      </keep-alive>
+      <router-view v-else />
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+   computed: {
+    isMicroApp() {
+      console.log('--->pppp',this.__POWERED_BY_QIANKUN__);
+      
+      return this.__POWERED_BY_QIANKUN__
+    }
   }
 }
-</script>
+</script> 
 
 <style>
 #app {

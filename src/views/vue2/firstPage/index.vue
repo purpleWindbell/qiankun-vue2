@@ -8,7 +8,7 @@
 -->
 <template>
     <div>
-        <h1 class="test">vue2</h1>
+        <h1 class="test">vue2的firstPage</h1>
         <el-link type="primary">主要链接</el-link>
     </div>
 </template>

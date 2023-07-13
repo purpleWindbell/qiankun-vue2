@@ -4,7 +4,7 @@
  * @LastVersion: 2.0
  * @Autor: gaoyue
  * @Date: 2023-06-30 15:13:56
- * @LastEditTime: 2023-07-06 17:53:14
+ * @LastEditTime: 2023-07-11 18:40:16
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -13,11 +13,11 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
-        redirect: '/main/vue1/'
+        redirect: '/vue2-page'
     },
     {
-        path: '/main/vue1/',
-        name: 'Vue1',
+        path: '/vue2-page',
+        name: 'Vue2',
         component: Home
     },
     // {
@@ -28,7 +28,7 @@ const routes = [
 ]
 const router = new VueRouter({
     mode: 'history',
-    base: window.__POWERED_BY_QIANKUN__ ? "/vue" : "/",//基础路径
+    base: window.__POWERED_BY_QIANKUN__ ? '/vue2-admin' : '/',//基础路径
     routes
 })
  
